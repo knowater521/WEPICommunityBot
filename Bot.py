@@ -15,7 +15,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    channel = bot.get_channel("505023574654844928")
+    channel = bot.get_channel("480978992891953152")
     string = member.message.author.mention + "さん、うぇぴ ゲーミングコミュニティへようこそ！\n\n #「うぇぴゲーミングコミュニティ」のご案内 には、ルールや必要事項が記載されています。入ったら最初ご覧になるようにお願いします。\n\n*新規の方は #verify にて` !verify`の発言をお願いしております。発言が確認され次第、自動的に他のチャンネルへの接続ができるようになります。*\n\n#自己紹介 は全ユーザーが共通して見ることができるチャンネルです。是非自己紹介をお願いします！\n\n---------------------------"""
     await bot.say(channel, string)
 
