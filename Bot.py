@@ -1,8 +1,7 @@
 import discord, os, asyncio
 from discord.ext import commands
 
-description = 'WEPICommunity bot'
-bot = commands.Bot(command_prefix='!', description=description)
+bot = commands.Bot(command_prefix='!')
 
 important_roles = ["Dev", "MEE6", "DISBOARD", "Discordちゃんねる(β)", "STAFF", "BOT", "verify"]
 
@@ -16,7 +15,7 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     channel = bot.get_channel("480978992891953152")
-    string = member.message.author.mention + "さん、うぇぴ ゲーミングコミュニティへようこそ！\n\n #「うぇぴゲーミングコミュニティ」のご案内 には、ルールや必要事項が記載されています。入ったら最初ご覧になるようにお願いします。\n\n*新規の方は #verify にて` !verify`の発言をお願いしております。発言が確認され次第、自動的に他のチャンネルへの接続ができるようになります。*\n\n#自己紹介 は全ユーザーが共通して見ることができるチャンネルです。是非自己紹介をお願いします！\n\n---------------------------"""
+    string = member.server.mention + "さん、うぇぴ ゲーミングコミュニティへようこそ！\n\n #「うぇぴゲーミングコミュニティ」のご案内 には、ルールや必要事項が記載されています。入ったら最初ご覧になるようにお願いします。\n\n*新規の方は #verify にて` !verify`の発言をお願いしております。発言が確認され次第、自動的に他のチャンネルへの接続ができるようになります。*\n\n#自己紹介 は全ユーザーが共通して見ることができるチャンネルです。是非自己紹介をお願いします！\n\n---------------------------"""
     await bot.say(channel, string)
 
 @bot.command(pass_context=True)
