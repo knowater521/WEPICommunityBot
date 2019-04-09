@@ -1,2 +1,4 @@
 # WEPICommunity
-WEPICommunity BOT
+WEPICommunityで使っていたBot
+
+現役可動はしていますが、更新することはないと思うのでオープンソース化
